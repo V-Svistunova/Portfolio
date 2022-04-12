@@ -171,6 +171,7 @@
 .home {
   
   padding-top: 50px;
+  padding-bottom: 100px;
 
   &__content {
     position: relative;
@@ -228,5 +229,37 @@
     background: url(./../images/20210916_1534433.jpg) no-repeat;
     background-size: 100%;
     background-position: 40% 38%;
+
+    @media (max-width: 400px) {
+      background-position: bottom;
+    }
+  }
+}
+
+
+
+.about {
+  padding: 110px 0;
+  text-align: center;
+  background-color: $secondary-color--light;
+
+  &__title {
+    @extend %font-title;
+    font-size: 34px;
+    line-height: 42px;
+    padding-bottom: 18px;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 480px;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+  }
+
+  &__text:last-child {
+    padding-bottom: 0;
   }
 }
