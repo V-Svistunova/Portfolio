@@ -1,0 +1,19 @@
+$primary-color: #ffffff;
+$secondary-color: #bdae82;
+$main-color: #000000;
+
+
+%font-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+
+// код ниже нужен чтобы не было конфликта после подключения библнотеки
+ 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
