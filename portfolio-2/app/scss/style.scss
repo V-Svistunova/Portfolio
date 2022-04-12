@@ -66,6 +66,28 @@
   }
 
 
+  &__btn-menu--active {
+
+    & span {
+      height: 0;
+    }
+
+    &::after {
+      width: 42px;
+      left: -10px;
+      top: 45%;
+      transform: rotate(-45deg); 
+    }
+
+    &::before {
+        left: -10px;
+        width: 42px;
+        top: 45%;
+        transform: rotate(45deg);
+    }
+  }
+
+
 
   &__nav {
     position: relative;
@@ -73,7 +95,23 @@
     border-bottom: 1px solid $primary-color--light;
 
     @media (max-width: 550px) {      
-      display: none;
+        opacity: 0;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;        
+	      background-color: $main-color;
+        transition: all 0.5s;
+        transform: translateX(800px);
+
+        &--active {
+          opacity: 1;
+          transform: translateX(0);
+      }
     }
   }
 
@@ -81,11 +119,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
+    @media (max-width: 550px) {      
+      display: flex;
+      flex-direction: column;
+      margin-top: 90px;
+    }
+  }
+  
   &__link {
+    display: inline-block;
+    font-size: 18px;
     @extend %font-link;
     color: $primary-color--light;
+
+    @media (max-width: 550px) {      
+      padding-bottom: 30px;
+      font-size: 34px;
+    }
   }
 
   &__link--active {    
@@ -93,10 +144,11 @@
   }
 
   &__lang {
+    font-size: 16px;
     position: absolute;
     right: 0;
     bottom: -150px;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 
     &-btn {
       border: 0;
@@ -107,7 +159,11 @@
     &-btn--active {
       color: $primary-color;
     }
-  }
 
+    @media (max-width: 550px) {
+      font-size: 34px;      
+      bottom: 100px;
+    }
+  }
 
 }
