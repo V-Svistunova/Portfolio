@@ -1,13 +1,15 @@
-$primary-color: #ffffff;
+$primary-color: #000000;
 $secondary-color: #bdae82;
-$main-color: #000000;
+$main-color: #ffffff;
 
 
 %font-title {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
 }
 
+
+/*
 
 // код ниже нужен чтобы не было конфликта после подключения библнотеки
  
@@ -17,3 +19,6 @@ $main-color: #000000;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+
+*/
