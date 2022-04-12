@@ -4,8 +4,7 @@ body {
 }
 
 body {
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
+	@extend %font-text;
 	font-size: 20px;
 	line-height: 40px;
 	color: $primary-color;

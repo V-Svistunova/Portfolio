@@ -1,6 +1,25 @@
 $primary-color: #000000;
+$primary-color--light: #828282;
 $secondary-color: #bdae82;
 $main-color: #ffffff;
+
+
+%font-text {
+  font-family: 'Quicksand', serif;
+  font-weight: 300;
+}
+
+
+%font-link {
+  font-family: 'Quicksand', serif;
+  font-weight: 600;
+}
+
+
+%font-subtitle {
+  font-family: 'Cinzel', serif;
+  font-weight: 300;
+}
 
 
 %font-title {

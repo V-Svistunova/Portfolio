@@ -5,3 +5,109 @@
 @import 'global';
 
 
+.header {
+
+  &__wrap {
+    position: relative;
+  }
+
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: 65px;
+  }
+
+  &__btn-menu {
+    display: none;
+
+    z-index: 11;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    padding: 12px 0;
+    margin-left: 20px;
+    margin-right: 5px;
+    transition: all .7s;
+    border: none;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      width: 40px;
+      height: 3px;
+      background-color: $primary-color;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      width: 40px;
+      height: 3px;
+      background-color: $primary-color;
+    }
+
+    & span {
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: $primary-color--light;
+    } 
+
+    @media (max-width: 550px) {      
+      display: block;
+    }    
+  }
+
+
+
+  &__nav {
+    position: relative;
+    padding: 30px 0;    
+    border-bottom: 1px solid $primary-color--light;
+
+    @media (max-width: 550px) {      
+      display: none;
+    }
+  }
+
+  &__list {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    @extend %font-link;
+    color: $primary-color--light;
+  }
+
+  &__link--active {    
+	  color: $primary-color;
+  }
+
+  &__lang {
+    position: absolute;
+    right: 0;
+    bottom: -150px;
+    transform: rotate(-90deg);
+
+    &-btn {
+      border: 0;
+      @extend %font-link;
+      color: $primary-color--light;
+    }
+
+    &-btn--active {
+      color: $primary-color;
+    }
+  }
+
+
+}
