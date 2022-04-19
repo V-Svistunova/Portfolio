@@ -263,3 +263,23 @@
     padding-bottom: 0;
   }
 }
+
+
+.skill {
+  padding: 90px 0;
+  text-align: center;
+
+  &__title {
+    @extend %font-title;
+    font-size: 34px;
+    line-height: 42px;
+    padding-bottom: 70px;
+  }
+
+  &__subtitle {
+    @extend %font-subtitle;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 80px;
+  }
+}
