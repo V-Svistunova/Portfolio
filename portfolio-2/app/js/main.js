@@ -8,4 +8,10 @@ $(function () {
       $('.header__btn-menu').removeClass('header__btn-menu--active'),
       $('.header__nav').removeClass('header__nav--active')
     });
+
+    $('.portfolio__content').slick({
+      dots: true,
+      arrows: false,
+      autoplay: true,
+    });
 })
