@@ -298,21 +298,29 @@
 
   &__item {
     width: 100%;
-    max-width: 160px;
+    max-width: 140px;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 750px) {
-      max-width: 140px;
+    @media (max-width: 760px) {
+      max-width: 120px;
     }
 
-    @media (max-width: 620px) {
-      max-width: 115px;
+    @media (max-width: 660px) {
+      max-width: 110px;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100px;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 90px;
     }
 
     @media (max-width: 400px) {
-      max-width: 90px;
+      max-width: 80px;
     }
   }
 
