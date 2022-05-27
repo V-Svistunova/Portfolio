@@ -1,7 +1,10 @@
-import * as flsFunctions from "./modules/functions.js"
-
+import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp(); // для коректной работы пребразования файлов в webp формат
+
+import jquery from './../../node_modules/jquery/dist/jquery';
+import slick from './../../node_modules/slick-carousel/slick/slick.js';
+
 
 $(function () {
   $('.header__btn-menu').on('click', function () {
