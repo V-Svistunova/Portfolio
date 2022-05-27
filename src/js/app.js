@@ -5,7 +5,6 @@ flsFunctions.isWebp(); // для коректной работы пребраз�
 import jquery from './../../node_modules/jquery/dist/jquery';
 import slick from './../../node_modules/slick-carousel/slick/slick.js';
 
-
 $(function () {
   $('.header__btn-menu').on('click', function () {
     $('.header__btn-menu').toggleClass('header__btn-menu--active'),
