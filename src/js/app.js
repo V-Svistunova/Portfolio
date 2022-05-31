@@ -1,4 +1,4 @@
-
+//import './libs/libs.js'
 
 import * as flsFunctions from "./modules/functions.js";
 
@@ -16,9 +16,12 @@ $(function () {
       $('.header__nav').removeClass('header__nav--active')
     });
 
+    /*
+
     $('.portfolio__content').slick({
       dots: true,
       arrows: false,
       autoplay: true,
     });
+    */
 })
