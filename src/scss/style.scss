@@ -130,6 +130,11 @@
     font-size: 18px;
     @extend %font-link;
     color: $primary-color--light;
+    transition: all 1s;
+
+    &:hover {
+      text-shadow: 2px 2px 8px $active-color;
+    }
 
     @media (max-width: 550px) {      
       padding-bottom: 30px;
