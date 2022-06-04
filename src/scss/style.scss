@@ -269,8 +269,66 @@
   }
 
   &__link {
+    position: relative;
+    display: inline-flex;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.8s ease 0s;
+    overflow: hidden;
+    background-color: rgb(120, 174, 255);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.4);
+    border-radius: 2px 2px 15px 15px;
+    margin-top: 10px;
+  }
+
+  &__link:hover  {
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(56, 56, 56, 0.4);
+  }  
+
+  &__link-text {
     @extend %font-link;
-    color: inherit;
+    color: initial;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;    
+  }
+
+  &__link-wow {
+    position: absolute;
+    width: 170px;
+    height: 170px; 
+    top: 0;
+    left: 0;   
+    
+  
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+    }
+  
+    &::before {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 33%;
+      animation: waves 8s infinite linear;
+    }
+
+    &::after {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 42%;
+      animation: waves 12s infinite linear;
+    }
   }
 }
 
@@ -476,8 +534,6 @@
 }
 
 
-
-
 .contact {
   padding: 115px 0 85px;
   text-align: center;
@@ -514,7 +570,6 @@
   }
   
 }
-
 
 
 .footer {
