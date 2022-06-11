@@ -231,9 +231,7 @@
   &__img {
     width: 100%;
     height: 380px;
-    background: url("@img/myPhoto.jpg") no-repeat;
-    background-size: 100%;
-    background-position: 40% 38%;
+    background: url("@img/myPhoto.jpg") 40% 38% / 100% no-repeat;
 
     @media (max-width: 400px) {
       background-position: bottom;
