@@ -361,13 +361,12 @@ body {
 }
 
 .no-webp .home__img {
-  background: url("../img/myPhoto.jpg") no-repeat; }
+  background: url("../img/myPhoto.jpg") 40% 38% no-repeat; }
 
 .home__img {
   width: 100%;
   height: 380px;
   background-size: 100%;
-  background-position: 40% 38%;
 }
 
 .about {
@@ -843,7 +842,7 @@ body {
   }
 }
 
-.webp .home__img { background: url(../img/myPhoto.webp) no-repeat; }
+.webp .home__img { background: url(../img/myPhoto.webp) 40% 38% no-repeat; }
 
 .webp .portfolio__img-link.link-1 { background: url(../img/screen/1.webp) no-repeat center; }
 
