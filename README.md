@@ -1,2 +1,2 @@
 
-# [Deploy webpages: Portfolio](https://v-svistunova.github.io/Portfolio/tree/gh-pages/dist)
+# [Deploy webpages: Portfolio](http://v-svistunova.github.io/Portfolio/dist)
