@@ -85,6 +85,32 @@ body {
     transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
   }
 }
+/* ----------------------------------------------
+
+ * ----------------------------------------
+ * animation slide-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
 html,
 body {
   height: 100%;
@@ -508,7 +534,7 @@ body {
   padding-bottom: 5px;
 }
 .portfolio__block {
-  padding: 45px 0;
+  padding: 20px 0;
 }
 .portfolio__img-link {
   display: inline-block;
@@ -601,7 +627,66 @@ body {
   font-size: 34px;
   line-height: 42px;
   color: #000000;
-  padding: 10px;
+  padding: 20%;
+}
+@media (max-width: 600px) {
+  .portfolio__img-title {
+    font-size: 24px;
+  }
+}
+.portfolio__spoiler {
+  margin-top: 20px;
+}
+.portfolio__spoiler-click {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.portfolio__spoiler-click .slide-bottom {
+  -webkit-animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
+  animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
+}
+.portfolio__spoiler-title {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 50px 20px;
+  position: relative;
+}
+.portfolio__spoiler-title::after, .portfolio__spoiler-title::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 1.5px;
+  background-color: #000000;
+  top: 5px;
+  transition: all 0.3s ease 0s;
+}
+.portfolio__spoiler-title::after {
+  transform: rotate(40deg);
+  top: 40%;
+  left: 0;
+}
+.portfolio__spoiler-title::before {
+  transform: rotate(-40deg);
+  top: 40%;
+  left: 12px;
+}
+.portfolio__spoiler-click.active .portfolio__spoiler-title::after, .portfolio__spoiler-click.active .portfolio__spoiler-title::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio__spoiler-click.active .portfolio__spoiler-title::after {
+  transform: rotate(-40deg);
+}
+.portfolio__spoiler-click.active .portfolio__spoiler-title::before {
+  transform: rotate(40deg);
+}
+.portfolio__spoiler-click.active .slide-bottom {
+  animation: none;
+}
+.portfolio__spoiler-content {
+  display: none;
+  margin-top: 20px;
 }
 
 .contact {

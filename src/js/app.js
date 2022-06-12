@@ -16,6 +16,11 @@ $(function () {
       $('.header__nav').removeClass('header__nav--active')
     });
 
+  $('.portfolio__spoiler-click').click(function(event) {
+    $(this).toggleClass('active').next().slideToggle(300);
+  });
+
+
     /*
 
     $('.portfolio__content').slick({
@@ -24,7 +29,7 @@ $(function () {
       autoplay: true,
     });
     */
-})
+});
 
 
 
