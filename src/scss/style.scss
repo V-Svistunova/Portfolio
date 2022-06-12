@@ -523,7 +523,6 @@
   } 
   
   &__img-title {
-    width: 100%;
     @extend %font-title;
     font-size: 34px;
     line-height: 42px;
@@ -534,7 +533,78 @@
       font-size: 24px;
     }
   }
+
+  &__spoiler {
+    margin-top: 20px;
+  }
+
+  &__spoiler-click {
+    width: 100%;    
+    background-color: rgba( $main-color, 0.6);
+    cursor: pointer;
+  }
+
+  &__spoiler-click .slide-bottom {
+    -webkit-animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
+	          animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
+  }
+  
+  &__spoiler-title {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 50px 20px;
+    position: relative;
+
+    
+    &::after,
+    &::before {      
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 1.5px;
+      background-color: $primary-color;
+      top: 5px;
+      transition: all 0.3s ease 0s;
+    }
+
+    &::after {
+      transform: rotate(40deg);
+      top: 40%;
+      left: 0;
+    }
+
+    &::before {
+      transform: rotate(-40deg);
+      top: 40%;
+      left: 12px;
+    }
+  }
+
+  &__spoiler-click.active &__spoiler-title::after,
+  &__spoiler-click.active &__spoiler-title::before{
+      background-color: rgba($primary-color, 0.5);
+  }
+
+  &__spoiler-click.active &__spoiler-title::after {
+    transform: rotate(-40deg);
+  }
+
+  &__spoiler-click.active &__spoiler-title::before {
+    transform: rotate(40deg);
+  }
+
+  &__spoiler-click.active .slide-bottom {
+    animation: none;
+  }
+
+  &__spoiler-content {
+    display: none;
+    margin-top: 20px;
+  }
+
 }
+
 
 
 .contact {
