@@ -428,6 +428,43 @@
     padding-bottom: 5px;
   }
 
+  &__tabs {
+    margin: 20px 0;
+  }
+
+  &__tabs-items {
+    display: flex;    
+    max-width: 840px;
+    margin: 0 auto;
+    background-color: rgba( $main-color, 0.6);
+  }
+
+  &__tabs-item {   
+    flex: 0 1 50%;   
+    color: inherit;
+    text-transform: uppercase;
+    transition: all 0.5s;      
+
+    &:first-child {
+      background-color: $accent-color;
+    }
+
+    &:hover {
+      border: 1px inset black;
+    }
+   
+  }
+
+
+
+  &__box {
+    display: none;
+  }
+
+  &__box:target {
+    display: block;
+  }
+
   &__block {
     padding: 20px 0;
   }
@@ -489,7 +526,15 @@
       @media (max-width: 500px) {
         background: url('@img/screen/6.png') center / cover no-repeat;
       }
-    }    
+    }
+    
+    &.link-7 {      
+      background: url('@img/screen/7.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/7.png') center / cover no-repeat;
+      }
+    } 
   }
 
   &__img-content {
@@ -514,8 +559,8 @@
   
   &__img-title {
     @extend %font-title;
-    font-size: 34px;
-    line-height: 42px;
+    font-size: 30px;
+    line-height: 32px;
     color: $primary-color;
     padding: 20%;
 
