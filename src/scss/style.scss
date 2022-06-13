@@ -6,6 +6,7 @@
 
 
 .header {
+  overflow-x: clip;
 
   &__wrap {
     position: relative;

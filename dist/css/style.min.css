@@ -145,28 +145,9 @@ body {
   padding: 0 20px;
 }
 
-.slick-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0px;
+.header {
+  overflow-x: clip;
 }
-.slick-dots li {
-  margin: 0 15px;
-}
-.slick-dots li.slick-active button {
-  background-color: #f6efee;
-  border: 1px solid #000000;
-}
-.slick-dots button {
-  background-color: #000000;
-  border: none;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  padding: 0;
-}
-
 .header__wrap {
   position: relative;
 }
