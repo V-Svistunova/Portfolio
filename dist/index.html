@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html',{
-  "title":"Portfolio"
-})
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  
+  <title>Portfolio</title>
+</head>
 <body>
   
-  @@include('html/header.html',{})
+  <header class="header">
+  <div class="container">
+    <div class="header__wrap">
+      <div class="header__burger">
+        <button class="header__btn-menu">
+          <span></span>
+        </button>
+      </div>        
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link header__link--active" href="#home">Home</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#about">About me</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#skills">Skills</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+        <div class="header__lang">
+          <button class="header__lang-btn header__lang--ru">RU</button>|
+          <button class="header__lang-btn header__lang-btn--active header__lang--eng">ENG</button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
 
   <div class="wrapper">
     <main class="main">
@@ -62,7 +104,7 @@
               <ul class="skill__list">
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/html_icon.svg" alt="html">
+                    <img class="skill__item-img" src="img/icon/html_icon.svg" alt="html">
                   </div>
                   <span class="skill__item-text">
                     HTML
@@ -70,7 +112,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/css_icon.svg" alt="css">
+                    <img class="skill__item-img" src="img/icon/css_icon.svg" alt="css">
                   </div>
                   <span class="skill__item-text">
                     CSS
@@ -78,7 +120,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/sass_icon.svg" alt="Sass">
+                    <img class="skill__item-img" src="img/icon/sass_icon.svg" alt="Sass">
                   </div>
                   <span class="skill__item-text">
                     Sass
@@ -86,7 +128,7 @@
                 </li>                
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/js_con.svg" alt="JavaScript">
+                    <img class="skill__item-img" src="img/icon/js_con.svg" alt="JavaScript">
                   </div>
                   <span class="skill__item-text">
                     JavaScript
@@ -94,7 +136,7 @@
                 </li>                
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/jquery_icon.svg" alt="jquery">
+                    <img class="skill__item-img" src="img/icon/jquery_icon.svg" alt="jquery">
                   </div>
                   <span class="skill__item-text">
                     jQuery
@@ -102,7 +144,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/bootstrap__icon.svg" alt="bootstrap">
+                    <img class="skill__item-img" src="img/icon/bootstrap__icon.svg" alt="bootstrap">
                   </div>
                   <span class="skill__item-text">
                     Bootstrap
@@ -110,7 +152,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/react__icon.svg" alt="react">
+                    <img class="skill__item-img" src="img/icon/react__icon.svg" alt="react">
                   </div>
                   <span class="skill__item-text">
                     React
@@ -118,7 +160,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/nodejs__icon.svg" alt="nodejs">
+                    <img class="skill__item-img" src="img/icon/nodejs__icon.svg" alt="nodejs">
                   </div>
                   <span class="skill__item-text">
                     Node.js
@@ -126,7 +168,7 @@
                 </li>               
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/wordpress_icon.svg" alt="wordpress">
+                    <img class="skill__item-img" src="img/icon/wordpress_icon.svg" alt="wordpress">
                   </div>
                   <span class="skill__item-text">
                     WordPress
@@ -134,7 +176,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/php_icon.svg" alt="php">
+                    <img class="skill__item-img" src="img/icon/php_icon.svg" alt="php">
                   </div>
                   <span class="skill__item-text">
                     PHP
@@ -142,7 +184,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/mysql__icon.svg" alt="mysql">
+                    <img class="skill__item-img" src="img/icon/mysql__icon.svg" alt="mysql">
                   </div>
                   <span class="skill__item-text">
                     MySQL 
@@ -150,7 +192,7 @@
                 </li> 
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/git_icon.svg" alt="git">
+                    <img class="skill__item-img" src="img/icon/git_icon.svg" alt="git">
                   </div>
                   <span class="skill__item-text">
                     Git
@@ -158,7 +200,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/gulp__icon.svg" alt="gulp">
+                    <img class="skill__item-img" src="img/icon/gulp__icon.svg" alt="gulp">
                   </div>
                   <span class="skill__item-text">
                     Gulp
@@ -166,7 +208,7 @@
                 </li> 
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/webpack__icon.svg" alt="webpack">
+                    <img class="skill__item-img" src="img/icon/webpack__icon.svg" alt="webpack">
                   </div>
                   <span class="skill__item-text">
                     Webpack
@@ -174,7 +216,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/vscode_icon.svg" alt="vscode">
+                    <img class="skill__item-img" src="img/icon/vscode_icon.svg" alt="vscode">
                   </div>
                   <span class="skill__item-text">
                     Visual Studio Code
@@ -189,7 +231,7 @@
               <ul class="skill__list">
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/adobe-photoshop.svg" alt="adobe-photoshop">
+                    <img class="skill__item-img" src="img/icon/adobe-photoshop.svg" alt="adobe-photoshop">
                   </div>
                   <span class="skill__item-text">
                     Adobe Photoshop
@@ -197,7 +239,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/figma__icon.svg" alt="figma">
+                    <img class="skill__item-img" src="img/icon/figma__icon.svg" alt="figma">
                   </div>
                   <span class="skill__item-text">
                     Figma
@@ -205,7 +247,7 @@
                 </li>
                 <li class="skill__item">
                   <div class="skill__item-wrap">
-                    <img class="skill__item-img" src="@img/icon/zeplin_icon.svg" alt="zeplin">
+                    <img class="skill__item-img" src="img/icon/zeplin_icon.svg" alt="zeplin">
                   </div>
                   <span class="skill__item-text">
                     Zeplin
@@ -324,17 +366,17 @@
           <ul class="contact__list">
             <li class="contact__item">
               <a class="contact__link" href="https://www.linkedin.com/in/viktoryia-svistunova/" target="_blank">
-                <img class="contact__img" src="@img/icon/linkedin_icon.svg" alt="linkedin">
+                <img class="contact__img" src="img/icon/linkedin_icon.svg" alt="linkedin">
               </a>
             </li>
             <li class="contact__item">
               <a class="contact__link" href="https://t.me/Viktoryia_Svistunova" target="_blank">
-                <img class="contact__img" src="@img/icon/telegram__icon.svg" alt="telegram">
+                <img class="contact__img" src="img/icon/telegram__icon.svg" alt="telegram">
               </a>
             </li>
             <li class="contact__item">
               <a class="contact__link" href="mailto:svistunovaviktoryia@gmail.com" target="_blank">
-                <img class="contact__img" src="@img/icon/gmail_icon.svg" alt="gmail">
+                <img class="contact__img" src="img/icon/gmail_icon.svg" alt="gmail">
               </a>
             </li>          
           </ul>
@@ -343,7 +385,13 @@
     </main>
   
 
-  @@include('html/footer.html',{})
+  
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copyright"> &#169; 2022 by Viktoryia Svistunova. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div> <!--это закрытие div class="wrapper", который начинается в main -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/app.min.js"></script>
 </body>
