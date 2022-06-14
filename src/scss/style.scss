@@ -532,6 +532,30 @@
         background: url('@img/screen/7.png') center / cover no-repeat;
       }
     } 
+
+    &.link-8 {      
+      background: url('@img/screen/8.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/8.png') center / cover no-repeat;
+      }
+    }
+
+    &.link-9 {      
+      background: url('@img/screen/9.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/9.png') center / cover no-repeat;
+      }
+    }
+
+    &.link-10 {      
+      background: url('@img/screen/10.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/10.png') center / cover no-repeat;
+      }
+    }
   }
 
   &__img-content {

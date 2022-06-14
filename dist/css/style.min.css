@@ -611,6 +611,30 @@ body {
     background: url("../img/screen/7.png") center/cover no-repeat;
   }
 }
+.portfolio__img-link.link-8 {
+  background: url("../img/screen/8.png") center/contain no-repeat;
+}
+@media (max-width: 500px) {
+  .portfolio__img-link.link-8 {
+    background: url("../img/screen/8.png") center/cover no-repeat;
+  }
+}
+.portfolio__img-link.link-9 {
+  background: url("../img/screen/9.png") center/contain no-repeat;
+}
+@media (max-width: 500px) {
+  .portfolio__img-link.link-9 {
+    background: url("../img/screen/9.png") center/cover no-repeat;
+  }
+}
+.portfolio__img-link.link-10 {
+  background: url("../img/screen/10.png") center/contain no-repeat;
+}
+@media (max-width: 500px) {
+  .portfolio__img-link.link-10 {
+    background: url("../img/screen/10.png") center/cover no-repeat;
+  }
+}
 .portfolio__img-content {
   opacity: 0;
   position: absolute;
