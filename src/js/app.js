@@ -1,5 +1,4 @@
-//import './libs/libs.js'
-
+import mixitup from 'mixitup';
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp(); // для коректной работы пребразования файлов в webp формат
@@ -20,6 +19,11 @@ $(function () {
     $(this).toggleClass('active').next().slideToggle(300);
   });
 
+  var mixer = mixitup('.portfolio__body' , {
+    load: {
+      filter: '.webpage'
+    }
+  });
 
     /*
 
@@ -48,4 +52,6 @@ for(let anchor of anchors) {
     })
   })
 }
+
+// mixup
 

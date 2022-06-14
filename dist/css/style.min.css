@@ -528,19 +528,18 @@ body {
   flex: 0 1 50%;
   color: inherit;
   text-transform: uppercase;
-  transition: all 0.5s;
-}
-.portfolio__tabs-item:first-child {
-  background-color: #dcf9c5;
+  transition: all 0.8s;
 }
 .portfolio__tabs-item:hover {
-  border: 1px inset black;
+  box-shadow: 1px 1px 15px black;
+}
+.portfolio .mixitup-control-active {
+  background-color: #dcf9c5;
 }
 .portfolio__box {
-  display: none;
-}
-.portfolio__box:target {
-  display: block;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
 }
 .portfolio__block {
   padding: 20px 0;

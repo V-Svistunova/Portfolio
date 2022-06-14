@@ -443,25 +443,24 @@
     flex: 0 1 50%;   
     color: inherit;
     text-transform: uppercase;
-    transition: all 0.5s;      
-
-    &:first-child {
-      background-color: $accent-color;
-    }
+    transition: all 0.8s;      
 
     &:hover {
-      border: 1px inset black;
-    }
-   
+      box-shadow: 1px 1px 15px black;
+    }   
+  }
+
+  & .mixitup-control-active {
+    background-color: $accent-color;
   }
 
   &__box {
-    display: none;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
   }
 
-  &__box:target {
-    display: block;
-  }
+  
 
   &__block {
     padding: 20px 0;
