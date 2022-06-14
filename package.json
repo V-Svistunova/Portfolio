@@ -38,6 +38,7 @@
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
+    "mixitup": "^3.3.1",
     "sass": "latest",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",

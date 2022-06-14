@@ -1,6 +1,7 @@
 @import 'reset';
-@import "fonts";
 @import 'vars';
+@import './mixins';
+@import './animation';
 @import 'libs';
 @import 'global';
 
@@ -194,17 +195,16 @@
 
   &__item {
     @extend %font-title;
+    @include adaptiv-font(47, 36);
     width: 100%;
     max-width: 300px;
-    font-size: 47px;
     line-height: 60px;
 
     @media (max-width: 800px) {
       margin-bottom: 25px;
     }
 
-    @media (max-width: 400px) {
-      font-size: 37px;      
+    @media (max-width: 400px) {      
       line-height: 50px;
     }
   }
@@ -443,27 +443,24 @@
     flex: 0 1 50%;   
     color: inherit;
     text-transform: uppercase;
-    transition: all 0.5s;      
-
-    &:first-child {
-      background-color: $accent-color;
-    }
+    transition: all 0.8s;      
 
     &:hover {
-      border: 1px inset black;
-    }
-   
+      box-shadow: 1px 1px 15px black;
+    }   
   }
 
-
+  & .mixitup-control-active {
+    background-color: $accent-color;
+  }
 
   &__box {
-    display: none;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
   }
 
-  &__box:target {
-    display: block;
-  }
+  
 
   &__block {
     padding: 20px 0;
@@ -535,6 +532,30 @@
         background: url('@img/screen/7.png') center / cover no-repeat;
       }
     } 
+
+    &.link-8 {      
+      background: url('@img/screen/8.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/8.png') center / cover no-repeat;
+      }
+    }
+
+    &.link-9 {      
+      background: url('@img/screen/9.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/9.png') center / cover no-repeat;
+      }
+    }
+
+    &.link-10 {      
+      background: url('@img/screen/10.png') center / contain no-repeat;
+      
+      @media (max-width: 500px) {
+        background: url('@img/screen/10.png') center / cover no-repeat;
+      }
+    }
   }
 
   &__img-content {
@@ -553,20 +574,16 @@
     
     &:hover {
       opacity: 1;
-      transition: all 2s;
+      transition: all 1s;
     }
   } 
   
   &__img-title {
     @extend %font-title;
-    font-size: 30px;
-    line-height: 32px;
+    @include adaptiv-font(35, 22);
+    line-height: 38px;
     color: $primary-color;
-    padding: 20%;
-
-    @media (max-width: 600px) {
-      font-size: 24px;
-    }
+    padding: 20%;    
   }
 
   &__spoiler {
