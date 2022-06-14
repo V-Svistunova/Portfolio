@@ -1,6 +1,7 @@
 @import 'reset';
-@import "fonts";
 @import 'vars';
+@import './mixins';
+@import './animation';
 @import 'libs';
 @import 'global';
 
@@ -194,17 +195,16 @@
 
   &__item {
     @extend %font-title;
+    @include adaptiv-font(47, 36);
     width: 100%;
     max-width: 300px;
-    font-size: 47px;
     line-height: 60px;
 
     @media (max-width: 800px) {
       margin-bottom: 25px;
     }
 
-    @media (max-width: 400px) {
-      font-size: 37px;      
+    @media (max-width: 400px) {      
       line-height: 50px;
     }
   }
@@ -455,8 +455,6 @@
    
   }
 
-
-
   &__box {
     display: none;
   }
@@ -553,20 +551,16 @@
     
     &:hover {
       opacity: 1;
-      transition: all 2s;
+      transition: all 1s;
     }
   } 
   
   &__img-title {
     @extend %font-title;
-    font-size: 30px;
-    line-height: 32px;
+    @include adaptiv-font(35, 22);
+    line-height: 38px;
     color: $primary-color;
-    padding: 20%;
-
-    @media (max-width: 600px) {
-      font-size: 24px;
-    }
+    padding: 20%;    
   }
 
   &__spoiler {

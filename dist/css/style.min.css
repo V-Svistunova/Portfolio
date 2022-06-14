@@ -77,6 +77,10 @@ body {
   font-weight: 600;
 }
 
+/* ----------------------------------------
+* animation waves button
+* ----------------------------------------
+*/
 @keyframes waves {
   0% {
     transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
@@ -85,12 +89,10 @@ body {
     transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
   }
 }
-/* ----------------------------------------------
-
- * ----------------------------------------
- * animation slide-bottom
- * ----------------------------------------
- */
+/* ----------------------------------------
+* animation slide-bottom
+* ----------------------------------------
+*/
 @-webkit-keyframes slide-bottom {
   0% {
     -webkit-transform: translateY(0);
@@ -306,9 +308,9 @@ body {
   }
 }
 .home__item {
+  font-size: calc(36px + 11 * ((100vw - 320px) / 1125));
   width: 100%;
   max-width: 300px;
-  font-size: 47px;
   line-height: 60px;
 }
 @media (max-width: 800px) {
@@ -318,7 +320,6 @@ body {
 }
 @media (max-width: 400px) {
   .home__item {
-    font-size: 37px;
     line-height: 50px;
   }
 }
@@ -626,18 +627,13 @@ body {
 }
 .portfolio__img-content:hover {
   opacity: 1;
-  transition: all 2s;
+  transition: all 1s;
 }
 .portfolio__img-title {
-  font-size: 30px;
-  line-height: 32px;
+  font-size: calc(22px + 13 * ((100vw - 320px) / 1125));
+  line-height: 38px;
   color: #000000;
   padding: 20%;
-}
-@media (max-width: 600px) {
-  .portfolio__img-title {
-    font-size: 24px;
-  }
 }
 .portfolio__spoiler {
   margin-top: 20px;
