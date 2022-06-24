@@ -548,23 +548,22 @@
   }
 
   &__spoiler-click {
-    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba( $main-color, 0.6);
-    cursor: pointer;
-  }
-
-  &__spoiler-click .slide-bottom {
-    -webkit-animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
-	          animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
-  }
+    cursor: pointer;    
+  } 
   
-  &__spoiler-title {
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 10px 50px 20px;
+  &__spoiler-arrows {
     position: relative;
+    top: -5px;
 
+    &.slide-bottom {
+      -webkit-animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
+            animation: slide-bottom 1.8s ease-in-out 1s infinite alternate both;
+
+    }
     
     &::after,
     &::before {      
@@ -574,7 +573,7 @@
       height: 1.5px;
       background-color: $primary-color;
       top: 5px;
-      transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;    
     }
 
     &::after {
@@ -587,19 +586,30 @@
       transform: rotate(-40deg);
       top: 40%;
       left: 12px;
-    }
+    }    
   }
+  
+  &__spoiler-title {
+    @extend %font-title;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px 50px;
+    position: relative;
+  }
+    
+    
 
-  &__spoiler-click.active &__spoiler-title::after,
-  &__spoiler-click.active &__spoiler-title::before{
+  &__spoiler-click.active &__spoiler-arrows::after,
+  &__spoiler-click.active &__spoiler-arrows::before{
       background-color: rgba($primary-color, 0.5);
   }
 
-  &__spoiler-click.active &__spoiler-title::after {
+  &__spoiler-click.active &__spoiler-arrows::after {
     transform: rotate(-40deg);
   }
 
-  &__spoiler-click.active &__spoiler-title::before {
+  &__spoiler-click.active &__spoiler-arrows::before {
     transform: rotate(40deg);
   }
 
