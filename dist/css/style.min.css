@@ -72,7 +72,7 @@ body {
   font-weight: 300;
 }
 
-.contact__title, .portfolio__spoiler-title, .portfolio__img-title, .portfolio__title, .skill__title, .about__title, .home__item {
+.contact__title, .portfolio__spoiler-title, .portfolio__img-title, .portfolio__title, .skill__title, .about__title, .home__title {
   font-family: "Cinzel", serif;
   font-weight: 600;
 }
@@ -307,37 +307,43 @@ body {
     align-items: flex-start;
   }
 }
-.home__item {
+.home__title {
   font-size: calc(36px + 11 * ((100vw - 320px) / 1125));
   width: 100%;
   max-width: 300px;
   line-height: 60px;
+  transform: translate(0px, 140%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
 @media (max-width: 800px) {
-  .home__item {
+  .home__title {
     margin-bottom: 25px;
   }
 }
 @media (max-width: 400px) {
-  .home__item {
+  .home__title {
     line-height: 50px;
   }
 }
-.home__subtitle {
-  font-size: 18px;
-  line-height: 22px;
-  padding-bottom: 12px;
+.home__title.active-animation {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
-.home__cast {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.home__subtitle-wrap {
+  flex-basis: 50%;
+  margin-right: 80px;
+  transform: translate(0px, 140%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.home__subtitle-wrap.active-animation {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.home__subtitle {
+  font-size: 20px;
+  line-height: 28px;
 }
 .home__img {
   width: 100%;
