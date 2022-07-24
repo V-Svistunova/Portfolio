@@ -77,6 +77,23 @@ body {
   font-weight: 600;
 }
 
+.text__item {
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+
+.anim-show {
+  transform: translate(0px, 130%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.anim-show.active-animation,
+.active-animation .anim-show {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
 /* ----------------------------------------
 * animation waves button
 * ----------------------------------------
@@ -372,7 +389,6 @@ body {
   font-size: 18px;
   line-height: 22px;
   margin: 0 auto;
-  padding-bottom: 45px;
 }
 .about__text:last-child {
   padding-bottom: 0;
@@ -444,6 +460,24 @@ body {
   line-height: 22px;
   padding: 50px 0;
 }
+.skill__item-img {
+  overflow: hidden;
+  transform: scale(0);
+  transition: all 0.8s ease 0s;
+}
+.skill__item-text {
+  transform: translate(0px, 50%);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+.skill__item.active-animation .skill__item-img {
+  transform: scale(1);
+}
+.skill__item.active-animation .skill__item-text {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.6s;
+}
 
 .icon {
   display: flex;
@@ -460,7 +494,7 @@ body {
   align-items: center;
   padding: 10px 0;
 }
-.icon__item-img {
+.icon__item-img, .icon__item-img img {
   width: calc(50px + 30 * ((100vw - 320px) / 1125));
   display: inline-block;
   object-fit: cover;
