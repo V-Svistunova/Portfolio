@@ -574,7 +574,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -582,24 +581,14 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-width: 700px;
-=======
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
   max-width: 850px;
->>>>>>> portfolio-newGulp
   margin: 0 auto;
 }
 
 .icon__item {
-<<<<<<< HEAD
-  width: calc(70px + 70 * ((100vw - 320px) / 1125));
+  width: calc(80px + 60 * ((100vw - 320px) / 1125));
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-  width: calc(80px + 60 * ((100vw - 320px) / 1125));
->>>>>>> portfolio-newGulp
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
