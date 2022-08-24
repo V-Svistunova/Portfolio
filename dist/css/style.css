@@ -632,6 +632,14 @@ body {
     background: url("../img/screen/10.png") center/cover no-repeat;
   }
 }
+.portfolio__img-link.link-11 {
+  background: url("../img/screen/11.png") center/contain no-repeat;
+}
+@media (max-width: 650px) {
+  .portfolio__img-link.link-11 {
+    background: url("../img/screen/11.png") center/cover no-repeat;
+  }
+}
 .portfolio__img-content {
   position: absolute;
   opacity: 0;

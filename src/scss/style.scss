@@ -469,7 +469,7 @@
     position: relative;
     width: 100%;
 
-    @for $i from 1 to 11 {    //последняя цифра не включена в цикл
+    @for $i from 1 to 12 {    //последняя цифра не включена в цикл
 
       &.link-#{$i} {      
         background: url('@img/screen/#{$i}.png') center / contain no-repeat;
