@@ -332,17 +332,15 @@ body {
   position: absolute;
   right: 0;
   bottom: -120px;
-<<<<<<< HEAD
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-=======
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
   font-size: 16px;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
   z-index: 10;
->>>>>>> portfolio-newGulp
 }
 
 .header__lang-btn {
@@ -350,22 +348,14 @@ body {
   border: 0;
   color: #828282;
 }
-<<<<<<< HEAD
 
-=======
-@media (max-width: 550px) {
-  .header__lang {
-    font-size: 34px;
-    bottom: 150px;
-  }
-}
 .header__lang .header__lang-input {
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
 }
->>>>>>> portfolio-newGulp
+
 .header__lang-btn--active {
   color: #000000;
 }
@@ -700,9 +690,10 @@ body {
   display: inline-block;
   position: relative;
   width: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-<<<<<<< HEAD
 
 .no-webp .portfolio__img-link.link-1 {
   background: url("../img/screen/1.png") center/contain no-repeat; }
@@ -737,103 +728,19 @@ body {
 .no-webp .portfolio__img-link.link-11 {
   background: url("../img/screen/11.png") center/contain no-repeat; }
 
-=======
-.portfolio__img-link.link-1 {
-  background: url("../img/screen/1.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-1 {
-    background: url("../img/screen/1.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-2 {
-  background: url("../img/screen/2.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-2 {
-    background: url("../img/screen/2.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-3 {
-  background: url("../img/screen/3.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-3 {
-    background: url("../img/screen/3.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-4 {
-  background: url("../img/screen/4.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-4 {
-    background: url("../img/screen/4.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-5 {
-  background: url("../img/screen/5.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-5 {
-    background: url("../img/screen/5.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-6 {
-  background: url("../img/screen/6.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-6 {
-    background: url("../img/screen/6.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-7 {
-  background: url("../img/screen/7.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-7 {
-    background: url("../img/screen/7.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-8 {
-  background: url("../img/screen/8.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-8 {
-    background: url("../img/screen/8.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-9 {
-  background: url("../img/screen/9.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-9 {
-    background: url("../img/screen/9.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-10 {
-  background: url("../img/screen/10.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-10 {
-    background: url("../img/screen/10.png") center/cover no-repeat;
-  }
-}
-.portfolio__img-link.link-11 {
-  background: url("../img/screen/11.png") center/contain no-repeat;
-}
-@media (max-width: 650px) {
-  .portfolio__img-link.link-11 {
-    background: url("../img/screen/11.png") center/cover no-repeat;
-  }
-}
 .portfolio__img-link:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
+
 .portfolio__img-link:hover .portfolio__img-content {
   opacity: 1;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
->>>>>>> portfolio-newGulp
+
 .portfolio__img-content {
   position: absolute;
   opacity: 0;
@@ -844,7 +751,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -855,19 +761,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.portfolio__img-content:hover {
-  opacity: 1;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-=======
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
->>>>>>> portfolio-newGulp
 }
 
 .portfolio__img-title {
@@ -878,35 +774,15 @@ body {
 }
 
 .portfolio__link {
-<<<<<<< HEAD
-  display: inline-block;
-  text-decoration: none;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, right top, from(rgba(202, 254, 159, 0.5)), to(rgba(202, 254, 159, 0.5)));
-  background-image: -o-linear-gradient(left, #ffffff, #ffffff), -o-linear-gradient(left, rgba(202, 254, 159, 0.5), rgba(202, 254, 159, 0.5));
-  background-image: linear-gradient(90deg, #ffffff, #ffffff), linear-gradient(90deg, rgba(202, 254, 159, 0.5), rgba(202, 254, 159, 0.5));
-  background-size: 500px 10px, 100% 10px;
-  background-repeat: no-repeat;
-  background-position-x: -500px, 0;
-  background-position-y: 100%;
-  -webkit-transition: background-position-x 0.6s;
-  -o-transition: background-position-x 0.6s;
-  transition: background-position-x 0.6s;
-}
-
-.portfolio__link:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, right top, from(#dcf9c5), to(#dcf9c5));
-  background-image: -o-linear-gradient(left, #ffffff, #ffffff), -o-linear-gradient(left, #dcf9c5, #dcf9c5);
-  background-image: linear-gradient(90deg, #ffffff, #ffffff), linear-gradient(90deg, #dcf9c5, #dcf9c5);
-  background-position-x: calc(100% + 500px), 0;
-=======
   position: absolute;
   bottom: -40px;
   left: 0;
   right: 0;
->>>>>>> portfolio-newGulp
 }
 
 .portfolio__link-title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   padding-bottom: 5px;
@@ -914,23 +790,36 @@ body {
   line-height: 22px;
   color: #000000;
   text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, right top, from(rgba(97, 97, 97, 0.5)), to(rgba(97, 97, 97, 0.5)));
+  background-image: -o-linear-gradient(left, #ffffff, #ffffff), -o-linear-gradient(left, rgba(97, 97, 97, 0.5), rgba(97, 97, 97, 0.5));
   background-image: linear-gradient(90deg, #ffffff, #ffffff), linear-gradient(90deg, rgba(97, 97, 97, 0.5), rgba(97, 97, 97, 0.5));
   background-size: 500px 3px, 100% 3px;
   background-repeat: no-repeat;
   background-position-x: -500px, 0;
   background-position-y: 100%;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+  -webkit-transition: background-position-x 0.6s;
+  -o-transition: background-position-x 0.6s;
   transition: background-position-x 0.6s;
 }
+
 .portfolio__link-title:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, right top, from(#a1a1a1), to(#a1a1a1));
+  background-image: -o-linear-gradient(left, #ffffff, #ffffff), -o-linear-gradient(left, #a1a1a1, #a1a1a1);
   background-image: linear-gradient(90deg, #ffffff, #ffffff), linear-gradient(90deg, #a1a1a1, #a1a1a1);
   background-position-x: calc(100% + 500px), 0;
 }
+
 .portfolio__item {
   width: 55px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   padding: 0 12px;
 }
+
 .portfolio__item-text {
   font-size: 10px;
   line-height: 11px;
@@ -1180,7 +1069,7 @@ body {
 
   .header__lang {
     font-size: 34px;
-    bottom: 200px;
+    bottom: 150px;
   }
 }
 
