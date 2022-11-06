@@ -83,10 +83,108 @@ if (animItems.length > 0) {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
     }
+  }  
+    animOnScroll();
   }
 
-  
-    animOnScroll();
-  
-}
 
+
+  //мультиязычность
+
+  var arrLang = {
+    "ru" : {
+      'home' : 'Главная',
+      'about' : 'Обо мне',
+      'skills' : 'Навыки',
+      'portfolio' : 'Портфолио',
+      'contacts' : 'Контакты',
+      
+      "name" : "Виктория Свистунова",
+      'profession-1' : 'HTML-верстальщик',
+      'profession-2' : 'Начинающий веб-разработчик',
+
+      'about-text-1' : 'Привет, меня зовут Виктория и я веб-разработчик из Минска.',
+      'about-text-2' : `Закончила курсы "HTML5 верстки" в IT-INCUBATOR и
+                        продолжаю обучаться на курсах "Junior Software Engineer in JavaScript/Front-end" в The Rolling Scopes.`,
+      'about-text-3' : `Имею коммерческий опыт разработки. Готова реализовать отличные проекты
+                        с замечательными людьми`,
+      'about-link' : 'мое резюме',
+
+      'skills-subtitle' : 'Я работаю с такими инструментами:',
+      'skills-subtitle-2' : 'Для вёрстка сайтов и приложений использую платформы:',
+
+      'webpage' : 'Сайты',
+      'app' : 'Приложения',
+
+      'portfolio-title-1' : 'Smoothie - сайт-визитка продукта',
+      'portfolio-title-2' : 'HelyFly - сайт-визитка сервиса',
+      'portfolio-title-3' : `Портфолио фотографа - сайт-визитка услуг`,
+      'portfolio-title-4' : 'Мебель для жизни - многостраничный сайт-каталог',
+      'portfolio-title-5' : 'Singolo - целевая страница ',
+      'portfolio-title-6' : 'Manao - сайт-визитка',
+      'portfolio-title-7' : 'Твоя продуктивность - сайт-визитка сервиса',
+      'portfolio-title-8' : 'Поймай снеговика - игра на скорость реакции',
+      'portfolio-title-9' : 'Интерактивная галерея - слайдер изображений',
+      'portfolio-title-10' : 'Медитация - приложение для расслабления и медитации',
+      'portfolio-title-11' : 'Капля дождя - игра на знание арифметики',
+      'more' : 'смотреть ещё',
+
+      'contact-subtitle' : `Хотите узнать больше или просто поболтать? Вот мои контакты:`,
+
+    },
+  
+    "en" : {
+      'home' : 'Home',
+      'about' : 'About me',
+      'skills' : 'Skills',
+      'portfolio' : 'Portfolio',
+      'contacts' : 'Contacts',
+      
+      "name" : "Viktoryia Svistunova",
+      'profession-1' : 'HTML coder',
+      'profession-2' : 'Junior Front-end Developer',
+
+      'about-text-1' : `Hi, I'm Viktoryia – HTML coder from Minsk. 
+                        I'm interested in web-development and everything connected with it.`,
+      'about-text-2' : `I completed the courses "HTML5 coding" in IT-INCUBATOR and 
+                        I'm studying at courses "Junior Software Engineer in JavaScript/Front-end" in The Rolling Scopes.`,
+      'about-text-3' : `Ready to implement excellent projects
+                        with wonderful people -`,
+      'about-link' : 'open my CV',
+
+      'skills-subtitle' : 'I work with such tools:',
+      'skills-subtitle-2' : 'Layout of sites and applications based on layouts from:',
+
+      'webpage' : 'webpage',
+      'app' : 'app',
+
+      'portfolio-title-1' : 'Smoothie - landing page contains information about a product',
+      'portfolio-title-2' : 'HelyFly - landing page contains information about a service',
+      'portfolio-title-3' : `Photographer's portfolio - landing page`,
+      'portfolio-title-4' : 'Furniture for life - multipage site',
+      'portfolio-title-5' : 'Simple singolo - landing page',
+      'portfolio-title-6' : 'Test-manao - landing page',
+      'portfolio-title-7' : 'Your productivity - landing page',
+      'portfolio-title-8' : 'Whack a snowman - reaction speed game',
+      'portfolio-title-9' : 'Flex Panel Gallery - javascript image slider',
+      'portfolio-title-10' : 'Meditation App - relaxation and meditation app',
+      'portfolio-title-11' : 'RainDrop game/app - a simulator in mathematics',
+      'more' : 'More',
+
+      'contact-subtitle' : `Want to know more or just chat? 
+                            You are welcome!`,
+    },
+  }
+
+
+  $(function() {
+    $('.translate').click(function() {
+      var lang = $(this).attr('id');
+      $('.header__lang-btn').removeClass('header__lang-btn--active');
+      $(this).addClass('header__lang-btn--active');
+  
+      $('.lang').each(function(index, item) {
+        $(this).text(arrLang[lang][$(this).attr('key')]);
+      });
+    });
+  });

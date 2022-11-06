@@ -91,7 +91,7 @@
 
   &__nav {
     position: relative;
-    padding: 30px 0;    
+    padding: 15px 0;    
     border-bottom: 1px solid $primary-color--light;
 
     @media (max-width: 550px) {      
@@ -149,27 +149,40 @@
   }
 
   &__lang {
-    font-size: 16px;
     position: absolute;
     right: 0;
     bottom: -120px;
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
     transform: rotate(90deg);
+    z-index: 10;
 
     &-btn {
+      margin: 0 10px;
       border: 0;
       @extend %font-link;
       color: $primary-color--light;
     }
 
-    &-btn--active {
-      color: $primary-color;
-    }
-
     @media (max-width: 550px) {
       font-size: 34px;      
-      bottom: 200px;
+      bottom: 150px;
+    }
+
+    .header__lang-input {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-btn--active  {
+      color: $primary-color;
     }
   }
+
+
 
 }
 
@@ -177,8 +190,8 @@
 
 .home {
   
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 25px;
+  padding-bottom: 50px;
 
   &__content {
     position: relative;
@@ -252,7 +265,7 @@
 
 
 .about {
-  padding: 110px 0;
+  padding: 55px 0;
   text-align: center;
   background-color: $secondary-color--light;
 
@@ -304,6 +317,7 @@
     letter-spacing: 2px;
     position: relative;
     z-index: 1;    
+    font-size: 15px;
   }
 
   &__link-wow {
@@ -341,7 +355,7 @@
 
 
 .skill {
-  padding: 90px 0;
+  padding: 45px 0;
   text-align: center;
 
   &__title {
@@ -414,7 +428,7 @@
 }
 
 .portfolio {
-  padding: 100px 0 50px;
+  padding: 50px 0 25px;
   text-align: center;  
   background-color: $secondary-color--light;
 
@@ -460,7 +474,7 @@
   
 
   &__block {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
 
   &__img-link {
@@ -468,6 +482,7 @@
     display: inline-block;    
     position: relative;
     width: 100%;
+    transition: all 0.3s ease 0s;
 
     @for $i from 1 to 12 {    //последняя цифра не включена в цикл
 
@@ -479,6 +494,15 @@
         }
       }
     } 
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:hover .portfolio__img-content {
+        opacity: 1;
+        transition: all 1s;
+    }
   }
 
   &__img-content {    
@@ -486,7 +510,6 @@
     opacity: 0;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
     background-color: rgba( $main-color, 0.6);
 
@@ -494,11 +517,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    &:hover {
-      opacity: 1;
-      transition: all 1s;
-    }
+    transition: all 0.3s ease 0s;
+  
   } 
   
   &__img-title {
@@ -509,8 +529,22 @@
     padding: 10%;    
   }
 
-  &__link { //wow-effect from link
-    display: inline-block;
+  &__link { 
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+  }
+
+  &__link-title {
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    @extend %font-link;
+    @include adaptiv-font(21, 16);
+    line-height: 22px;
+    color: $primary-color;  
+    //wow-effect from link
     text-decoration: none;
     background-image: linear-gradient(90deg, $bg, $bg),
     linear-gradient(90deg, $underline-color, $underline-color);
@@ -518,9 +552,10 @@
     background-repeat: no-repeat;
     background-position-x: calc($underline-block-width * -1), 0;
     background-position-y: 100%;
-    transition: background-position-x $underline-transition;
-
-    &:hover {
+    transition: color 0.3s ease 0s;
+    transition: background-position-x $underline-transition;  
+    
+    &:hover { 
       background-image: linear-gradient(90deg, $bg, $bg),
         linear-gradient(
           90deg,
@@ -531,13 +566,15 @@
     }
   }
 
-  &__link-title {
-    position: relative;
-    top: -10px;
-    @extend %font-link;
-    @include adaptiv-font(21, 16);
-    line-height: 22px;
-    color: $primary-color;        
+  &__item {
+    width: 55px;
+    max-width: max-content;
+    padding: 0 12px;
+  }
+
+  &__item-text {
+    font-size: 10px;
+    line-height: 11px;
   }
 
   &__spoiler {
@@ -624,7 +661,7 @@
 
 
 .contact {
-  padding: 115px 0 85px;
+  padding: 60px 0 40px;
   text-align: center;
 
   &__title {
@@ -662,7 +699,7 @@
 
 
 .footer {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   text-align: center;
 
   &__copyright {
