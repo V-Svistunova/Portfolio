@@ -779,22 +779,12 @@ body {
   left: 0;
   right: 0;
 }
-<<<<<<< HEAD
 
 .portfolio__link-title {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-=======
-@media screen and (max-width: 550px) {
-  .portfolio__link {
-    bottom: -50px;
-  }
-}
-.portfolio__link-title {
   width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
->>>>>>> portfolio-newGulp
   margin: 0 auto;
   padding-bottom: 5px;
   font-size: calc(16px + 5 * ((100vw - 320px) / 1125));
@@ -1081,6 +1071,12 @@ body {
   .header__lang {
     font-size: 34px;
     bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .portfolio__link {
+    bottom: -50px;
   }
 }
 
