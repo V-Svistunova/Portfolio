@@ -534,10 +534,15 @@
     bottom: -40px;
     left: 0;
     right: 0;
+
+    @media screen and (max-width: 550px) {
+      bottom: -50px;
+    }
   }
 
   &__link-title {
-    width: max-content;
+    width: 100%;
+    max-width: max-content;
     margin: 0 auto;
     padding-bottom: 5px;
     @extend %font-link;
