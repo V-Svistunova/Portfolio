@@ -1,9 +1,13 @@
 $primary-color: #000000;
 $primary-color--light: #828282;
-$secondary-color--light: #f6efee;
+$secondary-color--light: #EAE0DA;
 $main-color: #ffffff;
-$active-color: #6c3e20;
+$active-color: #8A5B3F;
 $accent-color: #dcf9c5;
+
+:root {
+  --swiper-theme-color: #000000;
+}
 
 
 //from wow-effect link

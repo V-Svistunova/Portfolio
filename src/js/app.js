@@ -100,8 +100,7 @@ if (animItems.length > 0) {
       'contacts' : 'Контакты',
       
       "name" : "Виктория Свистунова",
-      'profession-1' : 'HTML-верстальщик',
-      'profession-2' : 'Начинающий веб-разработчик',
+      'profession-1' : 'HTML-верстальщик/Front-end-разработчик',
 
       'about-text-1' : 'Привет, меня зовут Виктория и я веб-разработчик из Минска.',
       'about-text-2' : `Закончила курсы "HTML5 верстки" в IT-INCUBATOR и
@@ -127,6 +126,8 @@ if (animItems.length > 0) {
       'portfolio-title-9' : 'Интерактивная галерея - слайдер изображений',
       'portfolio-title-10' : 'Медитация - приложение для расслабления и медитации',
       'portfolio-title-11' : 'Капля дождя - игра на знание арифметики',
+      'portfolio-title-12' : 'Plants - лендинг сайта, предлагающего свои услуги по выращиванию растений.',
+      'portfolio-title-13' : 'Momentum — аналог одноименного приложения Интернет-магазина Chrome.',
       'more' : 'смотреть ещё',
 
       'contact-subtitle' : `Хотите узнать больше или просто поболтать? Вот мои контакты:`,
@@ -141,8 +142,7 @@ if (animItems.length > 0) {
       'contacts' : 'Contacts',
       
       "name" : "Viktoryia Svistunova",
-      'profession-1' : 'HTML coder',
-      'profession-2' : 'Junior Front-end Developer',
+      'profession-1' : 'HTML coder/ Front-end Developer',
 
       'about-text-1' : `Hi, I'm Viktoryia – HTML coder from Minsk. 
                         I'm interested in web-development and everything connected with it.`,
@@ -169,6 +169,8 @@ if (animItems.length > 0) {
       'portfolio-title-9' : 'Flex Panel Gallery - javascript image slider',
       'portfolio-title-10' : 'Meditation App - relaxation and meditation app',
       'portfolio-title-11' : 'RainDrop game/app - a simulator in mathematics',
+      'portfolio-title-12' : 'Plants - landing page of a site that offers its services for growing plants.',
+      'portfolio-title-13' : 'Momentum - analogue of the eponymous application of the Chrome Web Store.',
       'more' : 'More',
 
       'contact-subtitle' : `Want to know more or just chat? 
@@ -187,4 +189,15 @@ if (animItems.length > 0) {
         $(this).text(arrLang[lang][$(this).attr('key')]);
       });
     });
+  });
+
+  const swiper = new Swiper('.swiper', {
+    speed: 700,
+    autoplay: true,
+    spaceBetween: 20,
+    effect: 'coverflow',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });

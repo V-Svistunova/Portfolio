@@ -192,15 +192,28 @@
   
   padding-top: 25px;
   padding-bottom: 50px;
+  
+  background: #EAE0DA;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media (max-width: 800px) {
+      flex-direction: column-reverse;
+    }
+  }
 
   &__content {
+    max-width: 40%;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    padding-bottom: 50px;
 
     @media (max-width: 800px) {
+      max-width: initial;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -234,6 +247,7 @@
   &__subtitle-wrap {
     flex-basis: 50%;
     margin-right: 80px;
+    text-align: center;
 
     transform: translate(0px, 140%);
     opacity: 0;
@@ -253,10 +267,12 @@
 
   &__img {
     width: 100%;
+    max-width: 50%;
     height: 380px;
-    background: url("@img/myPhoto.jpg") 40% 38% / 100% no-repeat;
+    background: url("@img/myPhotoNew.jpg") 40% 38% / 100% no-repeat;
 
     @media (max-width: 400px) {
+      max-width: initial;
       background-position: bottom;
     }
   }
@@ -484,7 +500,7 @@
     width: 100%;
     transition: all 0.3s ease 0s;
 
-    @for $i from 1 to 12 {    //последняя цифра не включена в цикл
+    @for $i from 1 to 14 {    //последняя цифра не включена в цикл
 
       &.link-#{$i} {      
         background: url('@img/screen/#{$i}.png') center / contain no-repeat;
@@ -714,3 +730,14 @@
   }
 }
 
+.swiper-button-next, 
+.swiper-button-prev {
+  padding: 10px;
+}
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
