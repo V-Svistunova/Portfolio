@@ -201,6 +201,7 @@
     gap: 10px;
     @media (max-width: 800px) {
       flex-direction: column-reverse;
+      align-items: initial;
     }
   }
 
@@ -271,9 +272,12 @@
     height: 380px;
     background: url("@img/myPhotoNew.jpg") 40% 38% / 100% no-repeat;
 
+    @media (max-width: 800px) {
+      max-width: initial;
+    }
+
     @media (max-width: 400px) {
       max-width: initial;
-      background-position: bottom;
     }
   }
 }
@@ -500,7 +504,7 @@
     width: 100%;
     transition: all 0.3s ease 0s;
 
-    @for $i from 1 to 14 {    //последняя цифра не включена в цикл
+    @for $i from 1 to 15 {    //последняя цифра не включена в цикл
 
       &.link-#{$i} {      
         background: url('@img/screen/#{$i}.png') center / contain no-repeat;
@@ -730,14 +734,24 @@
   }
 }
 
-.swiper-button-next, 
-.swiper-button-prev {
-  padding: 10px;
-}
+
 .swiper-button-next {
   right: 0;
+  padding: 10px;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+
 }
 
 .swiper-button-prev {
   left: 0;
+  padding: 10px;
+
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+
 }
