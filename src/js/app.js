@@ -191,13 +191,22 @@ if (animItems.length > 0) {
     });
   });
 
-  const swiper = new Swiper('.swiper', {
+  const swiper1 = new Swiper('.swiper1', {
     speed: 700,
-    autoplay: true,
     spaceBetween: 20,
     effect: 'coverflow',
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.portfolio__box.webpage .swiper-button-next',
+      prevEl: '.portfolio__box.webpage .swiper-button-prev',
+    },
+  });
+
+  const swiper2 = new Swiper('.swiper2', {
+    speed: 700,
+    spaceBetween: 20,
+    effect: 'coverflow',
+    navigation: {
+      nextEl: '.portfolio__box.app .swiper-button-next',
+      prevEl: '.portfolio__box.app .swiper-button-prev',
     },
   });
